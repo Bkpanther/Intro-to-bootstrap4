@@ -47,7 +47,10 @@
 
                     <div class="row justify-content-center">
                         <img class="col-8 col-sm-6 align-self-center img-fluid" src="img/logo.png">
-                         <a href="#tablereserve" class="col-12 col-sm-6 align-self-center btn btn-warning mt-3">Reserve Table</a>
+                        <a role="button" class="col-12 col-sm-6 align-self-center btn btn-block nav-link btn-warning mt-3"
+                        data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
+                        data-placement="bottom" href="#reserveform">Reserve Table</a>
+                        
                     </div>
                 </div>
             </div>
@@ -123,7 +126,7 @@
                 <div class="card">
                     <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
                     <div class="card-body">
-                                <form id="tablereserve"> 
+                                <form id="reserveform"> 
                                     <div class="form-group row">
                                         <label class="col-12 col-md-4  col-form-label">Number of Guests</label>
                                         <div class="col-12 col-md-8">
@@ -222,6 +225,11 @@
  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+ <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
 </body>
 
 </html>
